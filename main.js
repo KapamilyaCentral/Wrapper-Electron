@@ -1,7 +1,30 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
+const RPC = require("discord-rpc");
+const { DataTransfer, Date, console } = require('globalthis/implementation');
+// discord rpc
+const rpc = new RPC.Client({
+  transport: "ipc"
+});
 
+rpc.on("ready", () => {
+  rpc.setActivity({
+    details: "Using Wrapper Electron",
+    state: "Making A Video",
+    startTimestamp: new Date(),
+    largeImageKey: "icon",
+    largeImageText: "Wrapper Electron",
+    smallImageKey: "Wrapper Electron",
+    smallImagetext: "Wrapper electron!!",
+  });
+
+
+  console.log("Rich presence is on!")
+});
+rpc.login({
+  clientId: "783041498010484817"
+});
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
@@ -41,6 +64,8 @@ app.on('window-all-closed', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+
+
 const env = Object.assign(process.env, require("./wrapper/env"), require("./wrapper/config"));
 
 const http = require("http");
