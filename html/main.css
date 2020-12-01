@@ -12,6 +12,21 @@
  .border-primary {
     border-color: #3f6ad8
   }
+
+
+.button {
+    cursor: pointer;
+    font-family: "SF Text Regular";
+    color: white; 
+    overflow: hidden;
+    background-image: url("../pages/gradient.png");
+    background-size: cover;
+    border-style: none;
+    margin: 8px 0;
+    padding: 12px 30px;
+    border-radius: 6px;
+}
+
   
   .border-secondary {
     border-color: #6c757d

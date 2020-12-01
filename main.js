@@ -3,12 +3,13 @@ const {app, BrowserWindow} = require('electron')
 const path = require('path')
 const RPC = require("discord-rpc");
 const { DataTransfer, Date, console } = require('globalthis/implementation');
+
 // discord rpc
 const rpc = new RPC.Client({
   transport: "ipc"
 });
 
-rpc.on("ready", () => {
+ rpc.on("ready", () => {
   rpc.setActivity({
     details: "Using Wrapper Electron",
     state: "Making A Video",
@@ -34,10 +35,15 @@ function createWindow () {
       preload: path.join(__dirname, 'preload.js')
     }
   })
-
+  mainWindow.webContents.on('new-window', function(e, url) {
+    e.preventDefault();
+    require('electron').shell.openExternal(url);
+  });
+  
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  mainWindow.loadFile('html/wrapper.html')
 
+  
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 }
