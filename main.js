@@ -24,7 +24,7 @@ const rpc = new RPC.Client({
   console.log("Rich presence is on!")
 });
 rpc.login({
-  clientId: "783041498010484817"
+  clientId: "732008614616629288"
 });
 function createWindow () {
   // Create the browser window.

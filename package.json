@@ -1,6 +1,6 @@
 {
   "name": "wrapperelectron",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "GoAnimate Wrapper electron port",
   "main": "main.js",
   "scripts": {
@@ -11,23 +11,18 @@
     "url": "git+https://github.com/2epik4u/Wrapper-Electron.git"
   },
   "author": "2Epik4u",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "devDependencies": {
-    "brotli": "1.3.2",
     "electron": "^11.0.3",
     "electron-packager": "^15.1.0",
-    "electron-winstaller": "^4.0.1",
-    "formidable": "^1.2.1",
-    "js-md5": "0.7.3",
-    "mp3-duration": "^1.1.0",
-    "node-zip": "github:kyriosli/node-zip",
-    "xmldoc": "^1.1.2"
+    "electron-winstaller": "^4.0.1"
   },
   "bugs": {
     "url": "https://github.com/2epik4u/Wrapper-Electron/issues"
   },
   "homepage": "https://github.com/2epik4u/Wrapper-Electron#readme",
   "dependencies": {
+    "discord-rpc": "^3.1.4",
     "author-regex": "^1.0.0",
     "base64-js": "^1.5.1",
     "at-least-node": "^1.0.0",
@@ -175,7 +170,13 @@
     "url-parse-lax": "^3.0.0",
     "xmldom": "^0.1.31",
     "yauzl": "^2.10.0",
-    "yargs-parser": "^19.0.4"
+    "yargs-parser": "^19.0.4",
+    "brotli": "1.3.2",
+    "formidable": "^1.2.1",
+    "js-md5": "0.7.3",
+    "mp3-duration": "^1.1.0",
+    "node-zip": "github:kyriosli/node-zip",
+    "xmldoc": "^1.1.2"
   },
   "keywords": [
     "goanimate",
